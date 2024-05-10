@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin: 0;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h3 {
+            color: #4CAF50;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul.a {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        ul.a li {
+            width: 30%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        ul.a img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        ul.a button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px; /* Added margin to separate the button from the game name */
+        }
+
+        ul.a p {
+            margin-top: 10px; /* Added margin to separate the game name from the image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Store</h1>
+    </header>
+    <section>
+        <h3>Featured Games</h3>
+        <p>Latest and most highly rated games.</p>
+        <ul class="a">
+            <li>
+                <img src="img/wp6212343.webp" alt="Valorant">
+                <p>Valorant</p>
+                <button onclick="downloadGame('Valorant')">Download</button>
+            </li>
+            <li>
+                <img src="img/csgo-rufa0kj6bpzf6v8h.webp" alt="CS:GO">
+                <p>CS:GO</p>
+                <button onclick="downloadGame('CS:GO')">Download</button>
+            </li>
+            <li>
+                <img src="img/fortnite-chapter-4-season-og-battle-pass-1-1024x576.webp" alt="Fortnite">
+                <p>Fortnite</p>
+                <button onclick="downloadGame('Fortnite')">Download</button>
+            </li>
+            <li>
+                <img src="img/7a7ecc3f4a49c67016f2da9e63cad03d.webp" alt="GTA V">
+                <p>GTA V</p>
+                <button onclick="downloadGame('GTA V')">Download</button>
+            </li>
+            <li>
+                <img src="img/wp4013113.webp" alt="Apex Legends">
+                <p>Apex Legends</p>
+                <button onclick="downloadGame('Apex Legends')">Download</button>
+            </li>
+            <li>
+                <img src="img/wp1854239.webp" alt="Rocket League">
+                <p>Rocket League</p>
+                <button onclick="downloadGame('Rocket League')">Download</button>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        function downloadGame(gameTitle) {
+            alert(`Downloading ${gameTitle}`);
+            // Add your logic for handling game download
+        }
+    </script>
+</body>
+</html>

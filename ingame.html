@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        #perks-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1em;
+        }
+
+        .perk-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1em;
+            padding: 1em;
+            width: 300px;
+        }
+
+        .perk-card h2 {
+            color: #333;
+        }
+
+        .perk-card p {
+            color: #666;
+        }
+
+        .perk-card button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <title>In-Game Perks</title>
+</head>
+<body>
+    <header>
+        <h1>In-Game Perks</h1>
+    </header>
+    
+    <section id="perks-container">
+        <!-- Perk cards will be dynamically added here using JavaScript -->
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sample data for perks (replace with your actual data)
+            const perksData = [
+                { title: 'Exclusive Content', description: 'Unlock special in-game items, skins, or characters that are only available through the website.' },
+                { title: 'Early Access', description: 'Grant users early access to new game features, updates, or releases before they are available to the general public.' },
+                { title: 'Boosts and Bonuses', description: 'Provide temporary boosts or bonuses, such as increased experience points (XP), in-game currency, or resource multipliers.' },
+                { title: 'Customization Options', description: 'Allow users to personalize their gaming experience with exclusive customization options like unique avatars, profile badges, or in-game banners.' },
+                { title: 'Premium Support', description: 'Offer priority customer support to perk members, ensuring faster response times and assistance.' },
+                { title: 'Ad-Free Experience', description: 'Remove ads for perk members, creating a more immersive and enjoyable gaming environment.' },
+                { title: 'Exclusive Tournaments and Events', description: 'Host special tournaments or in-game events exclusively for perk members with unique rewards and prizes.' },
+                { title: 'Special Challenges', description: 'Introduce challenging quests or missions that are specifically designed for perk members, offering exclusive rewards upon completion.' },
+                { title: 'Discounts on In-Game Purchases', description: 'Provide discounts or special offers on in-game purchases for perk members, encouraging them to spend within the game.' },
+                { title: 'Monthly Subscription Boxes', description: 'Send virtual or physical monthly subscription boxes with in-game items, merchandise, or exclusive content to perk members.' },
+                { title: 'Behind-the-Scenes Access', description: 'Share behind-the-scenes content, development updates, or exclusive developer interviews to give members an inside look at the game\'s creation.' },
+                { title: 'Interactive Community Features', description: 'Enable special forums, chat rooms, or voice channels where perk members can interact with each other and the game developers.' },
+                { title: 'Exclusive Guides and Tips', description: 'Provide perk members with access to exclusive guides, strategies, and tips to enhance their gameplay.' },
+                { title: 'Member-Only Challenges', description: 'Create special challenges or competitions that are only accessible to perk members, with unique rewards for successful participants.' },
+                { title: 'Virtual Currency Rewards', description: 'Give members a recurring amount of in-game currency as part of their perks, allowing them to make in-game purchases without spending real money.' },
+            ];
+
+            // Get the perks container
+            const perksContainer = document.getElementById('perks-container');
+
+            // Dynamically create perk cards
+            perksData.forEach(perk => {
+                const perkCard = document.createElement('div');
+                perkCard.classList.add('perk-card');
+
+                perkCard.innerHTML = `
+                    <h2>${perk.title}</h2>
+                    <p>${perk.description}</p>
+                    <button onclick="purchasePerk('${perk.title}')">Get Perk</button>
+                `;
+
+                perksContainer.appendChild(perkCard);
+            });
+
+            // Example function for purchasing a perk (replace with your logic)
+            window.purchasePerk = function (perkTitle) {
+                alert(`Congratulations! You have purchased the "${perkTitle}" perk.`);
+                // Add your logic for handling perk purchase
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Arena</title>
+<link rel="stylesheet" href="main.css">
+  <style>
+    body
+    {
+      background-color:black;
+      color:aliceblue;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    img
+    {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 300px;
+      height: 300px;
+    }
+    header {
+      color: #FFF;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      /* background-color: #333;  */
+      background-color: #3e2424;
+      display: flex;
+      justify-content: center ;
+      position: fixed;
+      top: 10;
+      left: 0;
+      width: 100%;
+    }
+    nav.scrolled
+    {
+      background-color: #333;
+      transition: 0.4s ease-in-out
+    }
+    nav a {
+      color: #FFF;
+      text-decoration: none;
+      padding: 1rem;
+    }
+    nav a:hover {
+      background-color: #281f1f;
+    }
+    h1, h2
+    {
+      text-align: center;
+      color: gray;
+    }
+    .container
+    {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    footer
+    {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="ingame.html">In-Game Perks</a>
+      <a href="store.html">Downloadable Games</a>
+      <a href="morefrompa.html">More From Pixel Arena</a>
+      <a href="news.html">News Hub</a>
+    </nav>
+  <img src="img/Pixel.jpg" alt="Pixel Arena Logo">
+    <!-- Header Section -->
+  <header>
+    <h1>Free games and in-game perks<br>
+      included with Pixel Arena</h1>
+    <br>
+      
+      <h2>Welcome to Pixel Arena, where gaming transcends boundaries! <br>
+        Immerse yourself in a world of unparalleled gaming experiences and discover a <br>realm where entertainment knows no bounds.</h2>
+  </header>
+  
+    <!--Copyright and Details-->
+  <footer class="footer">
+    <div class="footer__addr">
+
+      <h2>Address</h2>
+      
+      <address>
+        Christ University, Bangalore<br>
+        <br><br>
+            
+        <a class="footer__btn" href="chris.tigga@bcah.christuniversity.in">Email Us</a>
+      </address>
+    </div>
+    
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Social Media</h2>
+  
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Facebook</a>
+          </li>
+  
+          <li>
+            <a href="#">Instagram</a>
+          </li>
+              
+          <li>
+            <a href="#">Discord</a>
+          </li>
+        </ul>
+      </li>
+      
+      
+      
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          
+          <li>
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    <div class="legal">
+      <p>© 2023,Pixel Arena,Inc. All rights reserved.</p>
+    </div>
+  </footer>
+ </div>
+
+ <script>
+  document.addEventListener('scroll',()=>{
+    const nav = document.querySelector("nav");
+    if(window.scrollY > 0)
+      nav.classList.add("scrolled");
+    else
+      nav.classList.remove("scrolled");
+  })
+ </script>
+</body>
+</html>
